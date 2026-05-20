@@ -1,6 +1,6 @@
 function About() {
   return (
-    <section>
+    <section id="about">
       <h2>About Me</h2>
       <p>
         Full Stack Developer specialized in AI-powered systems.
