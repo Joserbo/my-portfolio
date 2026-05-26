@@ -1,11 +1,19 @@
-function Hero() {
+type HeroProps = {
+  darkMode: boolean
+}
+
+function Hero({ darkMode }: HeroProps) {
   return (
     <section className="min-h-[80vh] flex flex-col items-center justify-center text-center px-6">
       <p className="text-gray-400 uppercase tracking-widest mb-4">
         Full Stack Developer • AI Systems
       </p>
 
-      <h1 className="text-5xl md:text-7xl font-bold max-w-4xl leading-tight mb-6">
+      <h1 className={
+        darkMode
+          ? "text-gray-400 text-5xl md:text-7xl font-bold max-w-4xl leading-tight mb-6"
+          : "text-gray-600 text-5xl md:text-7xl font-bold max-w-4xl leading-tight mb-6"
+      }>
         Building intelligent web experiences with AI
       </h1>
 

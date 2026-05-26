@@ -1,4 +1,9 @@
-function Navbar() {
+type NavbarProps = {
+  darkMode: boolean
+  setDarkMode: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+function Navbar({ darkMode, setDarkMode }: NavbarProps) {
   return (
     <nav className="w-full flex items-center justify-between px-8 py-6 border-b border-gray-800">
       <h1 className="text-2xl font-bold">
@@ -30,6 +35,12 @@ function Navbar() {
           </a>
         </li>
       </ul>
+      <button
+          onClick={() => setDarkMode(!darkMode)}
+          className="border border-gray-700 px-4 py-2 rounded-lg"
+        >
+          {darkMode ? "Light Mode" : "Dark Mode"}
+      </button>
     </nav>
   )
 }

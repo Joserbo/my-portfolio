@@ -1,3 +1,4 @@
+import { useState } from "react"
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
 
@@ -9,11 +10,22 @@ import Projects from "./sections/Projects"
 import Contact from "./components/Contact"
 
 function App() {
-  return (
-    <main className="bg-black text-white min-h-screen">
-      <Navbar />
+  const [darkMode, setDarkMode] = useState(true)
 
-      <Hero />
+  return (
+    <main 
+      className={
+        darkMode
+          ? "bg-black text-white min-h-screen transition-colors duration-300"
+          : "bg-white text-black min-h-screen transition-colors duration-300"
+      }
+    >
+      <Navbar 
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
+      />
+
+      <Hero darkMode={darkMode}/>
 
       <div className="flex flex-col items-center gap-24 px-6">
         <About />
