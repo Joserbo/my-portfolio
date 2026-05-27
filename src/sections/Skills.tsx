@@ -14,7 +14,7 @@ function Skills() {
         Skills
       </h3>
 
-      <ul className="flex flex-wrap gap-4">
+      <ul className="list-disc list-inside flex flex-wrap gap-4">
         {skills.map((skill) => (
           <li
             key={skill}

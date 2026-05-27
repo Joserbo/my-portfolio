@@ -25,7 +25,9 @@ function App() {
         setDarkMode={setDarkMode}
       />
 
-      <Hero darkMode={darkMode}/>
+      <Hero 
+        darkMode={darkMode}
+      />
 
       <div className="flex flex-col items-center gap-24 px-6">
         <About />
