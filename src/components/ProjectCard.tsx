@@ -1,3 +1,6 @@
+/* 
+  *ProjectCard component to display individual project details in the portfolio.
+*/
 type ProjectCardProps = {
   title: string
   description: string
@@ -20,7 +23,10 @@ function ProjectCard({
       <p className="text-gray-400 mb-6">
         {description}
       </p>
-
+/*
+    * Displaying the technologies used in the project as badges.
+    * Using map to iterate over the tech array and create a badge for each technology.
+*/
       <div className="flex flex-wrap gap-2 mb-6">
         {tech.map((item) => (
           <span

@@ -1,5 +1,8 @@
 import ProjectCard from "../components/ProjectCard"
 
+/* 
+  * Array of project objects containing details for each project.
+*/
 const projects = [
   {
     title: "AI Support Agent",
